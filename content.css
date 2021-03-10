@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {	
+  height:120px;	
+  background-image: linear-gradient(to right, rgb(79, 66, 201) 40%, white, rgb(79, 66, 201));
+  text-align: center;
+  color: black;
+}
+header h4{
+	color:rgb(8, 51, 22);
+	
+}
+header h2{
+	padding-top:20px;
+	font-size: 35px;
+}
+ul.nav1 {
+	margin:0;
+	padding:0;
+	list-style:none;
+	height:36px; 
+	line-height:36px;
+	background:rgb(233, 37, 37); /* you can change the backgorund color here. */
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+}
+ul.nav1 li {
+	border-right:2px solid white; /* you can change the border color matching to your background color */
+	float:left;
+}
+ul.nav1 a {
+	display:block;
+	padding:0 28px;
+	color:#ccece6;
+	text-decoration:none;
+}
+ul.nav a:hover,
+ul.nav li.current a {
+	background:#086754;
+}
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 350px; /* only for demonstration, should be removed */
+  background: #fff;
+  padding: 20px;
+}
+p{
+  text-align: justify;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+button{
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size:20px;
+  font-weight: bold;
+}
+.wrapingimage  
+{  
+float: left;   
+margin: 0px 12px 3px 4px;   
+/*border: 2px solid blue;  */
+}   
+article {
+  float: right;
+  padding: 20px;
+  width: 70%;
+  background-color: #ffffff;
+  height: 350px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-image: linear-gradient(to right, rgb(79, 66, 201) 40%, white, rgb(79, 66, 201));
+  padding: 1px;
+  padding-left:20px;
+  text-align: left;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
